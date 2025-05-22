@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra To-Do</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 Ultra To-Do</h1>
+      <button id="themeBtn">🌙 Тёмная тема</button>
+    </header>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Новая задача...">
+      <select id="categorySelect">
+        <option value="general">Общее</option>
+        <option value="work">Работа</option>
+        <option value="study">Учёба</option>
+      </select>
+      <input type="date" id="deadlineInput">
+      <button id="addBtn">Добавить</button>
+    </div>
+
+    <div class="toolbar">
+      <input type="text" id="searchInput" placeholder="Поиск...">
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="active">Активные</button>
+        <button class="filter-btn" data-filter="completed">Завершённые</button>
+      </div>
+      <select id="sortSelect">
+        <option value="date">По дате</option>
+        <option value="text">По алфавиту</option>
+      </select>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="stats">
+      <div>Всего задач: <span id="totalTasks">0</span></div>
+      <div>Выполнено: <span id="completedTasks">0</span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
